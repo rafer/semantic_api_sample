@@ -59,9 +59,9 @@ class Client
 
   def create_job_body(customer_id, documents, enrichments)
     {
-      customerId:  customer_id.to_s,
-      documents:   documents,
-      enrichments: enrichments
+      :customerId =>   customer_id.to_s,
+      :documents =>    documents,
+      :enrichments =>  enrichments
     }.to_json
   end
 

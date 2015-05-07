@@ -17,11 +17,11 @@ def read_documents(file_path)
       next unless File.file?(file)
 
       contents = read_text_file(file)
-      documents << { id: file, text: contents }
+      documents << { :id => file, :text => contents }
     end
   else
     contents = read_text_file(file)
-    documents << { id: file_path, text: contents }
+    documents << { :id => file_path, :text =>  contents }
   end
 
   documents
